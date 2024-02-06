@@ -1,0 +1,238 @@
+@media only screen and (max-width: 1230px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  @font-face {
+    font-family: "guerrilla";
+    src: url(GUERRILLA-Normal.ttf) format("truetype");
+  }
+
+  body {
+    background-image: url('images/backgroundphone.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    user-select: none;
+    font-family: guerrilla;
+  }
+
+  div#container {
+    width: 100%;
+    min-height: 90vh;
+    margin: 10px auto;
+    overflow: auto;
+    text-align: center;
+
+  }
+
+  div#buttons {
+    float: left;
+    margin: 10px auto;
+    width: 100px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #timer {
+    float: right;
+    width: 300px;
+    height: auto;
+  }
+
+  #time {
+    padding-top: 15%;
+    float: none;
+    padding-left: 0;
+    font-size: 400%;
+    opacity: 80%;
+  }
+
+  #timeButtons button {
+    border: none;
+    background-color: rgb(232, 237, 241, 0);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-width: 30px;
+    min-height: 30px;
+  }
+
+  #timeButtons {
+    margin-right: 0;
+    padding-top: 13%;
+    float: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #content {
+    padding: 10px;
+    margin: 120px auto auto auto;
+    width: 90%;
+    min-height: 500px;
+    overflow: auto;
+  }
+
+  #ora {
+    width: 100%;
+    height: auto;
+  }
+
+  #pont {
+    position: fixed;
+    bottom: 0px;
+    right: 5%;
+    margin-top: 10vh;
+    height: 50vh;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .hidden {
+    background-image: url("images/hidden.png");
+    background-size: 100%;
+    font-size: 0px;
+  }
+
+  .flaged {
+    background-image: url("images/flaged.png");
+    font-size: var(--emojiSize-10);
+  }
+
+  .revealed {
+    background-image: url("images/revealed.png");
+    background-size: 100%;
+    font-size: var(--numberSize);
+  }
+  .won{
+    background-image: url("images/hidden.png");
+    background-size: 100%;
+    color: white;
+    font-size: var(--emojiSize-10);
+  }
+
+  #gameover {
+    width: 80vw;
+    /* a teljes szélesség 80%-a*/
+    height: 50vh;
+    background-image: url('images/endSign.png');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: -50vh;
+    left: 10vw;
+    /*a bal széle 10%-ra van állítva*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .animdown {
+    animation-name: downward;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+  }
+
+  .animup {
+    animation-name: upward;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+
+  #nameinput {
+    font-size: 20px;
+    width: 80%;
+    height: 40%;
+    margin-left: 10%;
+    transform: translate(0%, 10%);
+  }
+
+  #restartButton {
+    border: none;
+    background-color: rgb(232, 237, 241, 0);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 10%;
+    cursor: pointer;
+    margin-top: 10%;
+    margin-left: 5px;
+  }
+
+  #darkBackground {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 50%;
+    top: 0px;
+    left: 0px;
+  }
+
+  #gyozelemText {
+    color: lightgreen;
+    font-size: 200%;
+    margin-top: 10vh;
+    margin-left: 10%;
+  }
+
+  #nevText {
+    color: white;
+    font-size: 180%;
+    margin-left: 10%;
+  }
+
+  #idoText {
+    color: white;
+    font-size: 200%;
+    margin-left: 45%;
+    margin-top: -8vh;
+  }
+
+  #phoneh1 {
+    margin: 10px auto 10px auto;
+    display: block;
+    font-size: 50px;
+    color: rgb(255, 255, 255, 0.8);
+  }
+
+  #scores{
+    background-image: url('images/notebook.png');
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    padding: 10vh;
+  }
+
+  #soundButton {
+    width: 50%;
+    height: 100%;
+    margin-top: 1.4vh;
+    margin-left: 10vw;
+    transition: 0.3s;
+  }
+
+  #soundButton:active{
+    width: 49%;
+  }
+
+  #soundButton:hover{
+    margin-top: 1.4vh;
+  }
+  #phoneTitle{
+    display: block;
+    font-size: 50px;
+    color: rgba(239, 234, 217, 0.87);
+  }
+
+}

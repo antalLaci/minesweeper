@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleMini.css">
+    <title>Aknakereső</title>
+    <link rel="icon" href="images/favicon.ico">
+
+</head>
+
+<body>    
+    <div id="container">
+        <h1 id="phoneTitle">Aknakereső</h1>
+        <div id="buttons">
+            <br>
+            <button id="easy" type="button"style="background-image: url('images/easy.png');"></button>
+            <br>
+            <button id="normal" type="button" style="background-image: url('images/normalActive.png');"></button>
+            <br>
+            <button id="hard" type="button" style="background-image: url('images/hard.png');"></button>
+            <img src="images/soundOn.png" alt="soundOn" id="soundButton" onclick="mute()">
+        </div>
+        
+        <div id="content"> 
+            <div id="game">
+            
+
+            </div>
+            
+            
+            <div id="timer">
+
+                <div id="ora">
+                    <h1 id="time">10:00</h1>
+                    <div id="timeButtons">
+                        <button onclick="Plus()" style="background-image: url('images/plusButton.png');"></button><br>
+                        <button onclick="Infinite()" style="background-image: url('images/endlessButton.png');"></button><br>
+                        <button onclick="Minus()" style="background-image: url('images/minusButton.png');"></button><br>
+                    </div>
+                </div>
+                <div id="flagsLeft"><p id="flagsLeftText">30🚩 maradt</p></div>
+                <div id="pont">
+                    <table id="scores">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!--gameover tábla-->
+    <div id="darkBackground" style="display: none;"></div>
+    <div id="gameover">
+        <p id="gyozelemText">Győzelem</p>
+        <p id="nevText">Név:</p>
+        <form>
+            <input type="text" id="nameinput">
+        </form>    
+        <p id="idoText"></p>
+        <button type="submit"  id="restartButton" onclick="restart()" style="background-image: url('images/restartButton.png');"></button>    
+            
+       
+    </div>
+</body>
+
+</html>

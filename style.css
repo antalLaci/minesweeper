@@ -1,0 +1,316 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --numberSize: 25px;
+    --emojiSize: 20px;
+  }
+
+@font-face {
+    font-family: "guerrilla";
+    src: url(GUERRILLA-Normal.ttf) format("truetype");
+}
+body {
+    background-image: url('images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    user-select: none;
+    font-family: guerrilla;;
+}
+div#container{
+    width: 100%;
+    min-height: 90vh;
+    margin: 10px auto 10px auto; 
+    overflow: auto;
+    text-align: center;
+}
+
+div#buttons{
+    float: left;
+    margin: 16vh 4vw auto 5vw;
+    width: 200px;
+    height: 500px;
+    
+}
+#timer{
+    float: right;
+    width: 300px;
+    height: 500px; 
+}
+
+#time{
+    padding-top: 15%;
+    float: left;
+    padding-left: 20%;
+    font-size: 400%;
+    opacity: 80%;
+}
+
+#timeButtons button{
+    border: none;
+    background-color:rgb(232, 237, 241,0);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-width: 30px;
+    min-height: 30px;
+}
+
+#timeButtons button:active{
+    min-width: 29px;
+    min-height: 29px;
+    margin-bottom: 5px;
+}
+
+#timeButtons {
+    margin-right: 15%;
+    padding-top: 13%;
+    float: right;
+}
+
+#content{
+   padding: 10px;
+    margin: 16vh auto auto auto;
+    width: 900px;
+    min-height: 500px;
+    overflow: auto; 
+}
+
+#gameTable{
+    border: 20px solid;
+    border-image: url('images/border.png');
+    border-image-slice: 30;
+    
+}
+
+#game{
+   
+    float: left;
+    width: 500px;
+    height: max-content;
+}
+
+#ora{
+    background-image: url('images/timer.png');
+    background-position: center;
+    background-size:cover;
+    width: 300px;
+    height: 175px;
+    
+}
+#pont {
+
+    position: fixed;
+    bottom: 0px;
+    right: 5%;
+
+}
+td{
+    font-size: 25px;
+    text-align: center;    
+    cursor: pointer;
+    color: rgb(0,0,0,0);
+}
+table{
+    margin: auto;
+    text-align: center;
+    border-spacing: 0px;
+}
+
+#easy,#normal,#hard{
+    cursor: pointer;
+    background-position: center;
+    background-size: 100%;
+    width: 180px;
+    height: 50px;
+    margin: 20px;
+    border: none;
+    background-color:rgb(232, 237, 241,0);
+
+    background-size: 100%;
+    min-width: 150%;
+    min-height: 20%;
+    transition: 0.3s;
+}
+
+#easy:hover{
+    margin-left: 25px;
+}
+
+#normal:hover{
+    margin-left: 25px;
+}
+
+#hard:hover{
+    margin-left: 30px;
+}
+
+.hidden{
+    background-image: url("images/hidden.png");
+    background-size: 100%;
+    font-size: 0px;
+}
+
+.flaged{
+    background-image: url("images/flaged.png");
+    background-size: 100%;
+    font-size: var(--emojiSize);
+}
+
+.revealed{
+    background-image: url("images/revealed.png");
+    background-size: 100%;
+    font-size: var(--numberSize);
+}
+
+.won{
+    background-image: url("images/hidden.png");
+    background-size: 100%;
+    color: white;
+    font-size: var(--emojiSize);
+}
+
+#gameover {
+    
+    width: 40vw;
+    height: 50vh;
+    background-image: url('images/endSign.png');
+    background-position: center;
+    background-size:cover;
+    position: absolute;
+    top: -50vh; 
+    left: 30vw;
+    align-items: center;
+}
+.animdown {
+    animation-name: downward;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+.animup {
+    animation-name: upward;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes downward {
+    0% {top: -50vh;}
+    70% {top: 0vh;}
+    85% {top: -2vh;}
+    100% {top: 0vh;}
+}
+@keyframes upward {
+    0% {top: 0vh;}
+    50% {top: -25vh;}
+    100% {top: -50vh;}
+}
+#nameinput{
+    font-size: 25px;
+    width: 35%;
+    height: 50%;
+    margin-left: 13%;
+    transform: translate(0%,20%);
+}
+#restartButton{
+    border: none;
+    background-color:rgb(232, 237, 241,0);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 25%;
+    height: 25%;
+    cursor: pointer;
+    margin-left: 60%;
+    transition: 0.3s;
+}
+
+#restartButton:hover{
+    width: 26%;
+    height: 26%;
+}
+
+#darkBackground{
+    position:fixed;
+    height: 100%;
+    width: 100%;
+    background-color: black; 
+    opacity: 50%;
+    top: 0px;
+	left: 0px;
+}
+
+#gyozelemText {
+    color: lightgreen;
+    font-size: 300%;
+    margin-top: 23vh;
+    margin-left: 13%;
+}
+
+#nevText{
+    color:white;
+    font-size: 270%;
+    margin-left: 13%;
+}
+
+#idoText{
+    color:white;
+    font-size: 300%;
+    margin-left: 60%;
+    margin-top: -18vh;
+}
+
+#flagsLeft{
+    background-image: url('images/flagCounter.png');
+    width: 80%;
+    height: 20%;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    margin-left: 18%;
+    text-align: center;
+    font-size: 180%;
+    color: white;
+}
+
+#flagsLeftText{
+    margin-right: 10%;
+    padding-top: 2%;
+    text-shadow: 2px 2px 4px #0000006c;
+}
+
+#scores td{
+    color: #1a130f;
+    padding: 1vh;
+    cursor: default;
+}
+
+#scores{
+    background-image: url('images/notebook.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 42vh;
+    width: 20vw;
+    margin-top: 5%;
+    padding: 5vh;
+}
+
+#soundButton {
+    width: 30%;
+    margin-top: 12vh;
+    margin-left: -3vw;
+    transition: 0.3s;
+}
+
+#soundButton:active{
+    width: 29%;
+}
+
+#soundButton:hover{
+    margin-top: 11.8vh;
+}
+
+#phoneTitle{
+    display: none;
+}
